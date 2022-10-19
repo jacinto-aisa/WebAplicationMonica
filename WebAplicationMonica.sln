@@ -5,7 +5,7 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAplicationMonica", "WebAplicationMonica\WebAplicationMonica.csproj", "{D0196439-A96C-4644-97B5-C6BD763CE8C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAplicationMonica.Data.Test", "WebAplicationMonica.Data.Test\WebAplicationMonica.Data.Test.csproj", "{D0A72E94-6B9F-48DE-8C51-C88B2923A9A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAplicationMonica.Data.Test", "WebAplicationMonica.Data.Test\WebAplicationMonica.Data.Test.csproj", "{D0A72E94-6B9F-48DE-8C51-C88B2923A9A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -9,6 +9,7 @@ namespace WebAplicationMonica
             var builder = WebApplication.CreateBuilder(args);
 
             builder.Services.AddScoped<IRepositorioCurso,EFRepositorioCurso>();
+            builder.Services.AddScoped<IRepositorioModulo,EFRepositorioModulo>();
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
