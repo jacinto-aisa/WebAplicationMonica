@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAplicationMonica", "WebAplicationMonica\WebAplicationMonica.csproj", "{D0196439-A96C-4644-97B5-C6BD763CE8C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAplicationMonica.Data.Test", "WebAplicationMonica.Data.Test\WebAplicationMonica.Data.Test.csproj", "{D0A72E94-6B9F-48DE-8C51-C88B2923A9A7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D0196439-A96C-4644-97B5-C6BD763CE8C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0196439-A96C-4644-97B5-C6BD763CE8C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0196439-A96C-4644-97B5-C6BD763CE8C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0196439-A96C-4644-97B5-C6BD763CE8C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0A72E94-6B9F-48DE-8C51-C88B2923A9A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0A72E94-6B9F-48DE-8C51-C88B2923A9A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0A72E94-6B9F-48DE-8C51-C88B2923A9A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0A72E94-6B9F-48DE-8C51-C88B2923A9A7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B1AFACF7-9541-4938-99DC-EDA08EE2D947}
+	EndGlobalSection
+EndGlobal
