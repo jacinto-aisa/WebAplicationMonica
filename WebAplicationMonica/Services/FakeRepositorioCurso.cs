@@ -12,7 +12,7 @@ namespace WebAplicationMonica.Services
         public FakeRepositorioCurso()
         {
             misCursos.Add(new Curso() { Id = 1, Name = "Curso De Ingles" });
-            misCursos.Add(new Curso() { Id = 2, Name = "Curso de Francesiuiu" });
+            misCursos.Add(new Curso() { Id = 2, Name = "Curso de Frances" });
             misCursos.Add(new Curso() { Id = 3, Name = "Curso de Aleman" });
         }
 
