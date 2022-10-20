@@ -1,6 +1,7 @@
-﻿
-
-using Microsoft.EntityFrameworkCore.Query.Internal;
+﻿using Microsoft.EntityFrameworkCore.Query.Internal;
+using System.Reflection;
+using System.Resources;
+using WebAplicationMonica.CrossCuting.Exceptions;
 using WebAplicationMonica.Models;
 
 namespace WebAplicationMonica.Services
@@ -9,6 +10,8 @@ namespace WebAplicationMonica.Services
     {
         readonly DesignTimeJacintoContextFactory factoriaDeContextos = new();
         readonly JacintoContext contexto;
+        readonly ResourceManager resourceManager = new("WebAplicationMonica.Resources.ExceptionMessages", Assembly.GetExecutingAssembly());
+
         public EFRepositorioModulo()
         {
             string[] args = new string[1];
@@ -48,7 +51,11 @@ namespace WebAplicationMonica.Services
         {
             if (contexto.Modulos is not null)
             {
-                return contexto.Modulos.Find(Id);
+                var moduloEncontrado = contexto.Modulos.Find(Id);
+                if (moduloEncontrado is null)
+                    throw new ModuloNotFoundException(resourceManager.GetString("ModuloNotFound") ?? "", Id);
+
+                return moduloEncontrado;
             }
             return null;
         }
