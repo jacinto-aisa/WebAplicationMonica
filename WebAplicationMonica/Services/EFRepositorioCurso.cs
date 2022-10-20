@@ -20,7 +20,6 @@ namespace WebAplicationMonica.Services
         public EFRepositorioCurso(ILoggerManager loggerManager)
         {
             this.LoggerManager = loggerManager;
-            this.LoggerManager.LogInfo("holaaaaa");
             string[] args = new string[1];
             contexto = factoriaDeContextos.CreateDbContext(args);
         }
@@ -56,12 +55,18 @@ namespace WebAplicationMonica.Services
 
         public Curso? TomaCurso(int Id)
         {
+            this.LoggerManager.LogInfo($"Busqueda del Curso de Id: {Id} ");
             if (contexto.Cursos is not null)
             {
                 var cursoEncontrado = contexto.Cursos.Find(Id);
                 if (cursoEncontrado is null)
-                   throw new CursoNotFoundException(resourceManager.GetString("CursoNotFound") ?? "",Id);
-                 
+                {
+                    this.LoggerManager.LogWarn($"El curso de Id: {Id}, no se ha encontrado ");    
+                    //El log de Error lo lanzaremos cuando lo capturemos en el middleware.
+                    throw new CursoNotFoundException(resourceManager.GetString("CursoNotFound") ?? "", Id);
+
+                }
+
                 return cursoEncontrado;
             }
             return null;
