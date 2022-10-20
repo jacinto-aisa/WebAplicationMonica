@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using WebAplicationMonica.CrossCuting.Logging;
 using WebAplicationMonica.Models;
 using WebAplicationMonica.Services;
 
@@ -8,10 +9,12 @@ namespace WebAplicationMonica.Controllers
     public class CursosController : Controller
     {
         private readonly IRepositorioCurso _repositorioCurso;
+        private readonly ILoggerManager _loggerManager; 
 
-        public CursosController(IRepositorioCurso repositorioCurso)
+        public CursosController(IRepositorioCurso repositorioCurso,ILoggerManager loggerManager)
         {
             _repositorioCurso = repositorioCurso;
+            _loggerManager = loggerManager;
         }
 
         // GET: HomeController

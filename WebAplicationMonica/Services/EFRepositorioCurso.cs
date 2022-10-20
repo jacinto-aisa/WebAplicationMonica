@@ -1,7 +1,13 @@
 ﻿
 
 using Microsoft.EntityFrameworkCore.Query.Internal;
+using System.Linq.Expressions;
+using System.Reflection;
 using WebAplicationMonica.Models;
+using System.Resources;
+using WebAplicationMonica.CrossCuting.Exceptions;
+using NLog.LayoutRenderers;
+using WebAplicationMonica.CrossCuting.Logging;
 
 namespace WebAplicationMonica.Services
 {
@@ -9,8 +15,12 @@ namespace WebAplicationMonica.Services
     {
         readonly DesignTimeJacintoContextFactory factoriaDeContextos = new();
         readonly JacintoContext contexto;
-        public EFRepositorioCurso()
+        ResourceManager resourceManager = new ResourceManager("WebAplicationMonica.Resources.ExceptionMessages", Assembly.GetExecutingAssembly());
+        readonly ILoggerManager LoggerManager; 
+        public EFRepositorioCurso(ILoggerManager loggerManager)
         {
+            this.LoggerManager = loggerManager;
+            this.LoggerManager.LogInfo("holaaaaa");
             string[] args = new string[1];
             contexto = factoriaDeContextos.CreateDbContext(args);
         }
@@ -48,7 +58,11 @@ namespace WebAplicationMonica.Services
         {
             if (contexto.Cursos is not null)
             {
-                return contexto.Cursos.Find(Id);
+                var cursoEncontrado = contexto.Cursos.Find(Id);
+                if (cursoEncontrado is null)
+                   throw new CursoNotFoundException(resourceManager.GetString("CursoNotFound") ?? "",Id);
+                 
+                return cursoEncontrado;
             }
             return null;
         }
