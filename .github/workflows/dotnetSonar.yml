@@ -47,4 +47,5 @@ jobs:
           dotnet build 
           cd ..
           dotnet test --collect "Code Coverage"
+          cd WebAplicationMonica
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
