@@ -15,12 +15,13 @@ namespace WebAplicationMonica.Services
     {
         readonly DesignTimeJacintoContextFactory factoriaDeContextos = new();
         readonly JacintoContext contexto;
-        ResourceManager resourceManager = new ResourceManager("WebAplicationMonica.Resources.ExceptionMessages", Assembly.GetExecutingAssembly());
+        readonly ResourceManager resourceManager = new("WebAplicationMonica.Resources.ExceptionMessages", Assembly.GetExecutingAssembly());
         readonly ILoggerManager LoggerManager; 
         public EFRepositorioCurso(ILoggerManager loggerManager)
         {
             this.LoggerManager = loggerManager;
-            this.LoggerManager.LogInfo("holaaaaa");
+            this.LoggerManager.LogInfo("Construcción de EF Repositorio Curso");
+           
             string[] args = new string[1];
             contexto = factoriaDeContextos.CreateDbContext(args);
         }
@@ -30,6 +31,10 @@ namespace WebAplicationMonica.Services
             {
                 contexto.Cursos.Add(curso);
                 contexto.SaveChanges();
+            }
+            else
+            {
+                this.LoggerManager.LogError($"El curso no ha podido ser insertado Id: {curso.Id} Nombre: {curso.Name}");
             }
         }
 

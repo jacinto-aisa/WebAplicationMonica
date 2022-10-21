@@ -15,12 +15,13 @@ namespace WebAplicationMonica.Controllers
         {
             _repositorioCurso = repositorioCurso;
             _loggerManager = loggerManager;
+            _loggerManager.LogInfo("Construyendo el cursos controller");
         }
 
         // GET: HomeController
         public ActionResult Index()
         {
-            return View("Index",_repositorioCurso.ListaCursos());
+             return View("Index",_repositorioCurso.ListaCursos());
         }
 
         // GET: HomeController/Details/5
