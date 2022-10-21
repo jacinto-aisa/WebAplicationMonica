@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using WebAplicationMonica.Controllers;
 using WebAplicationMonica.Services;
 using WebAplicationMonica.Models;
+using WebAplicationMonica.CrossCuting.Logging;
 
 namespace WebAplicationMonica.Data.Test
 {
