@@ -20,6 +20,7 @@ namespace WebAplicationMonica.Services
         public EFRepositorioCurso(ILoggerManager loggerManager)
         {
             this.LoggerManager = loggerManager;
+            this.LoggerManager.LogInfo("holaaaaa");
             string[] args = new string[1];
             contexto = factoriaDeContextos.CreateDbContext(args);
         }
@@ -29,6 +30,10 @@ namespace WebAplicationMonica.Services
             {
                 contexto.Cursos.Add(curso);
                 contexto.SaveChanges();
+            }
+            else
+            {
+                this.LoggerManager.LogError($"El curso no ha podido ser insertado Id: {curso.Id} Nombre: {curso.Name}");
             }
         }
 
