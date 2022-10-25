@@ -1,0 +1,87 @@
+2022-10-21 10:47:44.8063 INFO Construcción de EF Repositorio Curso
+2022-10-21 10:47:45.2867 INFO Construyendo el cursos controller
+2022-10-21 10:49:28.5013 INFO Construcción de EF Repositorio Curso
+2022-10-21 10:49:28.7100 INFO Construyendo el cursos controller
+2022-10-21 10:50:18.7128 INFO Construcción de EF Repositorio Curso
+2022-10-21 10:50:18.9168 INFO Construyendo el cursos controller
+2022-10-21 10:56:15.8352 INFO Construcción de EF Repositorio Curso
+2022-10-21 10:56:16.0490 INFO Construyendo el cursos controller
+2022-10-21 10:57:12.1870 INFO Construcción de EF Repositorio Curso
+2022-10-21 10:57:12.1951 INFO Construyendo el cursos controller
+2022-10-21 10:57:19.7957 INFO Construcción de EF Repositorio Curso
+2022-10-21 10:57:19.7957 INFO Construyendo el cursos controller
+2022-10-21 10:57:25.3927 INFO Construcción de EF Repositorio Curso
+2022-10-21 10:57:25.3927 INFO Construyendo el cursos controller
+2022-10-21 10:57:27.1130 INFO Construcción de EF Repositorio Curso
+2022-10-21 10:57:27.1130 INFO Construyendo el cursos controller
+2022-10-21 10:57:37.1408 INFO Construcción de EF Repositorio Curso
+2022-10-21 10:57:37.1408 INFO Construyendo el cursos controller
+2022-10-21 10:57:37.3760 INFO Construcción de EF Repositorio Curso
+2022-10-21 10:57:37.3760 INFO Construyendo el cursos controller
+2022-10-21 10:57:38.4966 INFO Construcción de EF Repositorio Curso
+2022-10-21 10:57:38.4966 INFO Construyendo el cursos controller
+2022-10-21 10:57:41.5701 INFO Construcción de EF Repositorio Curso
+2022-10-21 10:57:41.5701 INFO Construyendo el cursos controller
+2022-10-21 10:57:41.5701 INFO Construcción de EF Repositorio Curso
+2022-10-21 10:57:41.5701 INFO Construyendo el cursos controller
+2022-10-21 12:22:31.6666 INFO Construyendo el cursos controller
+2022-10-21 12:22:31.7088 INFO Construyendo el cursos controller
+2022-10-21 12:22:31.7110 INFO Construyendo el cursos controller
+2022-10-21 12:22:49.8198 INFO Construyendo el cursos controller
+2022-10-21 12:22:49.8686 INFO Construyendo el cursos controller
+2022-10-21 12:22:49.8686 INFO Construyendo el cursos controller
+2022-10-21 12:25:21.5855 INFO Construyendo el cursos controller
+2022-10-21 12:25:21.6235 INFO Construyendo el cursos controller
+2022-10-21 12:25:21.6235 INFO Construyendo el cursos controller
+2022-10-21 12:37:31.2991 INFO holaaaaa
+2022-10-21 12:37:31.7326 INFO Construyendo el cursos controller
+2022-10-21 12:37:48.8409 INFO Se ejecuta la acción info
+2022-10-21 12:37:55.3761 INFO Se ejecuta la acción info
+2022-10-21 14:26:36.8820 INFO Busqueda del Curso de Id: 9 
+2022-10-21 14:26:43.3690 WARN El curso de Id: 9, no se ha encontrado 
+2022-10-21 14:29:23.2568 INFO Busqueda del Curso de Id: 9 
+2022-10-21 14:29:28.7208 WARN El curso de Id: 9, no se ha encontrado 
+2022-10-21 14:29:40.9454 INFO Busqueda del Curso de Id: 9 
+2022-10-21 14:31:48.8851 INFO Busqueda del Curso de Id: 10 
+2022-10-21 14:31:49.1674 WARN El curso de Id: 10, no se ha encontrado 
+2022-10-21 14:38:28.1634 INFO Busqueda del Curso de Id: 19 
+2022-10-21 14:38:28.4578 WARN El curso de Id: 19, no se ha encontrado 
+2022-10-21 14:38:28.6412 ERROR excepcion en el lanzamiento de excepciones: WebAplicationMonica.CrossCuting.Exceptions.CursoNotFoundException
+   at WebAplicationMonica.Services.EFRepositorioCurso.TomaCurso(Int32 Id) in C:\Users\jacin\source\repos\WebAplicationMonica\WebAplicationMonica\Services\EFRepositorioCurso.cs:line 66
+   at WebAplicationMonica.Controllers.CursosController.Details(Int32 id) in C:\Users\jacin\source\repos\WebAplicationMonica\WebAplicationMonica\Controllers\CursosController.cs:line 29
+   at lambda_method42(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at ExceptionMiddleware.InvokeAsync(HttpContext httpContext) in C:\Users\jacin\source\repos\WebAplicationMonica\WebAplicationMonica\CrossCuting\Exceptions\ExceptionMiddleware.cs:line 16
+2022-10-21 14:39:40.4507 INFO Busqueda del Curso de Id: 19 
+2022-10-21 14:39:40.7401 WARN El curso de Id: 19, no se ha encontrado 
+2022-10-21 21:10:54.5606 INFO holaaaaa
+2022-10-21 21:10:55.0793 INFO Construyendo el cursos controller
+2022-10-21 21:10:55.0793 INFO Estoy entrando en la acción index de CursosController
+2022-10-21 21:11:07.0118 INFO holaaaaa
+2022-10-21 21:11:07.0118 INFO Construyendo el cursos controller
+2022-10-21 21:11:11.6090 INFO holaaaaa
+2022-10-21 21:11:11.6090 INFO Construyendo el cursos controller
+2022-10-21 21:11:11.8521 INFO holaaaaa
+2022-10-21 21:11:11.8521 INFO Construyendo el cursos controller
+2022-10-21 21:11:11.8521 INFO Estoy entrando en la acción index de CursosController
+2022-10-21 21:11:31.5297 INFO holaaaaa
+2022-10-21 21:11:31.5297 INFO Construyendo el cursos controller
+2022-10-21 21:11:31.5297 INFO Busqueda del Curso de Id: 19 
+2022-10-21 21:11:31.7401 WARN El curso de Id: 19, no se ha encontrado 

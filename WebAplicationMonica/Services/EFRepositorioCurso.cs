@@ -15,7 +15,7 @@ namespace WebAplicationMonica.Services
     {
         readonly DesignTimeJacintoContextFactory factoriaDeContextos = new();
         readonly JacintoContext contexto;
-        ResourceManager resourceManager = new ResourceManager("WebAplicationMonica.Resources.ExceptionMessages", Assembly.GetExecutingAssembly());
+        readonly ResourceManager resourceManager = new("WebAplicationMonica.Resources.ExceptionMessages", Assembly.GetExecutingAssembly());
         readonly ILoggerManager LoggerManager; 
         public EFRepositorioCurso(ILoggerManager loggerManager)
         {
@@ -30,6 +30,10 @@ namespace WebAplicationMonica.Services
             {
                 contexto.Cursos.Add(curso);
                 contexto.SaveChanges();
+            }
+            else
+            {
+                this.LoggerManager.LogError($"El curso no ha podido ser insertado Id: {curso.Id} Nombre: {curso.Name}");
             }
         }
 
@@ -56,12 +60,18 @@ namespace WebAplicationMonica.Services
 
         public Curso? TomaCurso(int Id)
         {
+            this.LoggerManager.LogInfo($"Busqueda del Curso de Id: {Id} ");
             if (contexto.Cursos is not null)
             {
                 var cursoEncontrado = contexto.Cursos.Find(Id);
                 if (cursoEncontrado is null)
-                   throw new CursoNotFoundException(resourceManager.GetString("CursoNotFound") ?? "",Id);
-                 
+                {
+                    this.LoggerManager.LogWarn($"El curso de Id: {Id}, no se ha encontrado ");    
+                    //El log de Error lo lanzaremos cuando lo capturemos en el middleware.
+                    throw new CursoNotFoundException(resourceManager.GetString("CursoNotFound") ?? "", Id);
+
+                }
+
                 return cursoEncontrado;
             }
             return null;

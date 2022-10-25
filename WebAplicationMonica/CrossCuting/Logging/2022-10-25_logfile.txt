@@ -1,0 +1,4 @@
+2022-10-25 12:52:43.2637 INFO holaaaaa
+2022-10-25 12:52:43.6215 INFO Construyendo el cursos controller
+2022-10-25 12:53:17.8264 INFO holaaaaa
+2022-10-25 12:53:18.0302 INFO Construyendo el cursos controller

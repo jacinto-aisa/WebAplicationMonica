@@ -1,4 +1,5 @@
 using NLog;
+using WebAplicationMonica.CrossCuting.Exceptions;
 using WebAplicationMonica.CrossCuting.Logging;
 using WebAplicationMonica.Services;
 
@@ -10,8 +11,8 @@ namespace WebAplicationMonica
         {
             var builder = WebApplication.CreateBuilder(args);
 
-        //https://code-maze.com/net-core-web-development-part3/
-        //https://www.c-sharpcorner.com/UploadFile/deveshomar/extension-method-in-C-Sharp/#:~:text=Create%20And%20Use%20An%20Extension%20Method%20In%20C%23,6.%20Add%20an%20Extension%20class.%20...%20M%C3%A1s%20elementos
+            //https://code-maze.com/net-core-web-development-part3/
+            //https://www.andlearning.org/catch-exception-using-a-middleware-in-asp-net-core/
             LogManager.LoadConfiguration(string.Concat(Directory.GetCurrentDirectory(), "/nlog.config"));
             builder.Services.AddSingleton<ILoggerManager, LoggerManager>();
             builder.Services.AddScoped<IRepositorioCurso,EFRepositorioCurso>();
@@ -25,8 +26,9 @@ namespace WebAplicationMonica
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {
-                app.UseExceptionHandler("/Home/Error");
+                app.UseExceptionMiddleware();
             }
+
             app.UseStaticFiles();
 
             app.UseRouting();

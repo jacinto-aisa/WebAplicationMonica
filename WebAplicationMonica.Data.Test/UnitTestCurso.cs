@@ -2,13 +2,14 @@ using Microsoft.AspNetCore.Mvc;
 using WebAplicationMonica.Controllers;
 using WebAplicationMonica.Services;
 using WebAplicationMonica.Models;
+using WebAplicationMonica.CrossCuting.Logging;
 
 namespace WebAplicationMonica.Data.Test
 {
     [TestClass]
     public class UnitTestCurso
     {
-        readonly CursosController controlador = new(new FakeRepositorioCurso());
+        readonly CursosController controlador = new(new FakeRepositorioCurso(),new LoggerManager());
 
         [TestMethod]
         public void PruebaCursosDetallesVistaEncontrado()
