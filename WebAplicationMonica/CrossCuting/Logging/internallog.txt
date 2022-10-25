@@ -3911,3 +3911,183 @@
 2022-10-25 12:25:56.8904 Trace  Scanning Property LineEnding 'Default' NLog.Targets
 2022-10-25 12:25:56.9069 Trace FileTarget(Name=logfile) has 2 layouts
 2022-10-25 12:25:56.9069 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.SingleProcessFileAppender+Factory
+2022-10-25 12:52:41.2936 Info Message Template Auto Format enabled
+2022-10-25 12:52:41.3175 Debug ScanAssembly('NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2022-10-25 12:52:41.3744 Debug Setting 'NLog.Targets.FileTarget.name' to 'logfile'
+2022-10-25 12:52:41.3744 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'C:\Users\jacin\source\repos\WebAplicationMonica\WebAplicationMonica\CrossCuting\Logging\${shortdate}_logfile.txt'
+2022-10-25 12:52:41.3949 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-10-25 12:52:41.4047 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-10-25 12:52:41.4047 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2022-10-25 12:52:41.4047 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-10-25 12:52:41.4047 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-10-25 12:52:41.4220 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-10-25 12:52:41.4220 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-10-25 12:52:41.4220 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-10-25 12:52:41.4220 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-10-25 12:52:41.4220 Info Adding target FileTarget(Name=logfile)
+2022-10-25 12:52:41.4220 Debug Registered target logfile: NLog.Targets.FileTarget
+2022-10-25 12:52:41.4220 Trace ParseRulesElement
+2022-10-25 12:52:41.4631 Debug Watching file-filter 'nlog.config' in directory: C:\Users\jacin\source\repos\WebAplicationMonica\WebAplicationMonica
+2022-10-25 12:52:41.4681 Debug --- NLog configuration dump ---
+2022-10-25 12:52:41.4681 Debug Targets:
+2022-10-25 12:52:41.4681 Debug FileTarget(Name=logfile)
+2022-10-25 12:52:41.4681 Debug Rules:
+2022-10-25 12:52:41.4681 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]
+2022-10-25 12:52:41.4681 Debug --- End of NLog configuration dump ---
+2022-10-25 12:52:41.4805 Trace FindReachableObject<System.Object>:
+2022-10-25 12:52:41.4805 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]'
+2022-10-25 12:52:41.4805 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2022-10-25 12:52:41.4805 Trace  Scanning FileTarget 'FileTarget(Name=logfile)'
+2022-10-25 12:52:41.4805 Trace   Scanning Property FileName 'C:\Users\jacin\source\repos\WebAplicationMonica\WebAplicationMonica\CrossCuting\Logging\${shortdate}_logfile.txt' NLog.Layouts
+2022-10-25 12:52:41.4805 Trace   Scanning SimpleLayout 'C:\Users\jacin\source\repos\WebAplicationMonica\WebAplicationMonica\CrossCuting\Logging\${shortdate}_logfile.txt'
+2022-10-25 12:52:41.4805 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-10-25 12:52:41.4805 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-10-25 12:52:41.4805 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-10-25 12:52:41.4805 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-10-25 12:52:41.4805 Trace   Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2022-10-25 12:52:41.4805 Trace   Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2022-10-25 12:52:41.4805 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-10-25 12:52:41.4977 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-10-25 12:52:41.4977 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-10-25 12:52:41.4977 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-10-25 12:52:41.4977 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-10-25 12:52:41.4977 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-10-25 12:52:41.4977 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2022-10-25 12:52:41.4977 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2022-10-25 12:52:41.4977 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2022-10-25 12:52:41.4977 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\jacin\source\repos\WebAplicationMonica\WebAplicationMonica\nlog.config
+2022-10-25 12:52:41.5126 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2022-10-25 12:52:41.5126 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2022-10-25 12:52:41.5126 Trace Initializing Layout Renderer: ${message}
+2022-10-25 12:52:41.5126 Trace Initializing Layout Renderer: ${literal}
+2022-10-25 12:52:41.5126 Trace Initializing Layout Renderer: ${level}
+2022-10-25 12:52:41.5126 Trace Initializing Layout Renderer: ${literal}
+2022-10-25 12:52:41.5126 Trace Initializing Layout Renderer: ${longdate}
+2022-10-25 12:52:41.5126 Trace Initializing ${longdate} ${level:uppercase=true} ${message}
+2022-10-25 12:52:41.5278 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-10-25 12:52:41.5278 Trace Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2022-10-25 12:52:41.5278 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-10-25 12:52:41.5278 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-10-25 12:52:41.5278 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-10-25 12:52:41.5278 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-10-25 12:52:41.5278 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-10-25 12:52:41.5278 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-10-25 12:52:41.5278 Trace Initializing Layout Renderer: ${literal}
+2022-10-25 12:52:41.5278 Trace Initializing Layout Renderer: ${shortdate}
+2022-10-25 12:52:41.5278 Trace Initializing Layout Renderer: ${literal}
+2022-10-25 12:52:41.5278 Trace Initializing C:\Users\jacin\source\repos\WebAplicationMonica\WebAplicationMonica\CrossCuting\Logging\${shortdate}_logfile.txt
+2022-10-25 12:52:41.5278 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-10-25 12:52:41.5278 Trace Scanning SimpleLayout 'C:\Users\jacin\source\repos\WebAplicationMonica\WebAplicationMonica\CrossCuting\Logging\${shortdate}_logfile.txt'
+2022-10-25 12:52:41.5278 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-10-25 12:52:41.5278 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-10-25 12:52:41.5278 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-10-25 12:52:41.5278 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-10-25 12:52:41.5278 Trace Initializing FileTarget(Name=logfile)
+2022-10-25 12:52:41.5457 Trace FindReachableObject<NLog.Layouts.Layout>:
+2022-10-25 12:52:41.5457 Trace Scanning FileTarget 'FileTarget(Name=logfile)'
+2022-10-25 12:52:41.5457 Trace  Scanning Property FileName 'C:\Users\jacin\source\repos\WebAplicationMonica\WebAplicationMonica\CrossCuting\Logging\${shortdate}_logfile.txt' NLog.Layouts
+2022-10-25 12:52:41.5457 Trace  Scanning SimpleLayout 'C:\Users\jacin\source\repos\WebAplicationMonica\WebAplicationMonica\CrossCuting\Logging\${shortdate}_logfile.txt'
+2022-10-25 12:52:41.5457 Trace  Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2022-10-25 12:52:41.5457 Trace  Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2022-10-25 12:52:41.5457 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2022-10-25 12:52:41.5457 Trace FileTarget(Name=logfile) has 2 layouts
+2022-10-25 12:52:41.5457 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.SingleProcessFileAppender+Factory
+2022-10-25 12:52:43.2637 Debug Targets configured when LogLevel >= Debug for Logger: WebAplicationMonica.CrossCuting.Logging.LoggerManager
+2022-10-25 12:52:43.2637 Debug Logger WebAplicationMonica.CrossCuting.Logging.LoggerManager [Debug] => logfile
+2022-10-25 12:52:43.2637 Debug Logger WebAplicationMonica.CrossCuting.Logging.LoggerManager [Info] => logfile
+2022-10-25 12:52:43.2637 Debug Logger WebAplicationMonica.CrossCuting.Logging.LoggerManager [Warn] => logfile
+2022-10-25 12:52:43.2637 Debug Logger WebAplicationMonica.CrossCuting.Logging.LoggerManager [Error] => logfile
+2022-10-25 12:52:43.2637 Debug Logger WebAplicationMonica.CrossCuting.Logging.LoggerManager [Fatal] => logfile
+2022-10-25 12:52:43.2870 Debug FileTarget(Name=logfile): Preparing for new file 'C:\Users\jacin\source\repos\WebAplicationMonica\WebAplicationMonica\CrossCuting\Logging\2022-10-25_logfile.txt'
+2022-10-25 12:52:43.2942 Debug FileTarget(Name=logfile): Creating file appender: C:\Users\jacin\source\repos\WebAplicationMonica\WebAplicationMonica\CrossCuting\Logging\2022-10-25_logfile.txt
+2022-10-25 12:52:43.2942 Trace FileTarget(Name=logfile): Opening C:\Users\jacin\source\repos\WebAplicationMonica\WebAplicationMonica\CrossCuting\Logging\2022-10-25_logfile.txt with allowFileSharedWriting=False
+2022-10-25 12:53:16.1216 Info Message Template Auto Format enabled
+2022-10-25 12:53:16.1454 Debug ScanAssembly('NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2022-10-25 12:53:16.2016 Debug Setting 'NLog.Targets.FileTarget.name' to 'logfile'
+2022-10-25 12:53:16.2016 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'C:\Users\jacin\source\repos\WebAplicationMonica\WebAplicationMonica\CrossCuting\Logging\${shortdate}_logfile.txt'
+2022-10-25 12:53:16.2016 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-10-25 12:53:16.2168 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-10-25 12:53:16.2168 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2022-10-25 12:53:16.2168 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-10-25 12:53:16.2168 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-10-25 12:53:16.2168 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-10-25 12:53:16.2168 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-10-25 12:53:16.2168 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-10-25 12:53:16.2168 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-10-25 12:53:16.2168 Info Adding target FileTarget(Name=logfile)
+2022-10-25 12:53:16.2305 Debug Registered target logfile: NLog.Targets.FileTarget
+2022-10-25 12:53:16.2305 Trace ParseRulesElement
+2022-10-25 12:53:16.2511 Debug Watching file-filter 'nlog.config' in directory: C:\Users\jacin\source\repos\WebAplicationMonica\WebAplicationMonica
+2022-10-25 12:53:16.2511 Debug --- NLog configuration dump ---
+2022-10-25 12:53:16.2511 Debug Targets:
+2022-10-25 12:53:16.2511 Debug FileTarget(Name=logfile)
+2022-10-25 12:53:16.2511 Debug Rules:
+2022-10-25 12:53:16.2511 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]
+2022-10-25 12:53:16.2511 Debug --- End of NLog configuration dump ---
+2022-10-25 12:53:16.2624 Trace FindReachableObject<System.Object>:
+2022-10-25 12:53:16.2624 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]'
+2022-10-25 12:53:16.2624 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2022-10-25 12:53:16.2624 Trace  Scanning FileTarget 'FileTarget(Name=logfile)'
+2022-10-25 12:53:16.2624 Trace   Scanning Property FileName 'C:\Users\jacin\source\repos\WebAplicationMonica\WebAplicationMonica\CrossCuting\Logging\${shortdate}_logfile.txt' NLog.Layouts
+2022-10-25 12:53:16.2624 Trace   Scanning SimpleLayout 'C:\Users\jacin\source\repos\WebAplicationMonica\WebAplicationMonica\CrossCuting\Logging\${shortdate}_logfile.txt'
+2022-10-25 12:53:16.2624 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-10-25 12:53:16.2624 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-10-25 12:53:16.2624 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-10-25 12:53:16.2624 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-10-25 12:53:16.2624 Trace   Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2022-10-25 12:53:16.2624 Trace   Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2022-10-25 12:53:16.2624 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-10-25 12:53:16.2624 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-10-25 12:53:16.2624 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-10-25 12:53:16.2624 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-10-25 12:53:16.2624 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-10-25 12:53:16.2624 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-10-25 12:53:16.2624 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2022-10-25 12:53:16.2624 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2022-10-25 12:53:16.2624 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2022-10-25 12:53:16.2794 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\jacin\source\repos\WebAplicationMonica\WebAplicationMonica\nlog.config
+2022-10-25 12:53:16.2794 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2022-10-25 12:53:16.2794 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2022-10-25 12:53:16.2794 Trace Initializing Layout Renderer: ${message}
+2022-10-25 12:53:16.2794 Trace Initializing Layout Renderer: ${literal}
+2022-10-25 12:53:16.2794 Trace Initializing Layout Renderer: ${level}
+2022-10-25 12:53:16.2794 Trace Initializing Layout Renderer: ${literal}
+2022-10-25 12:53:16.2794 Trace Initializing Layout Renderer: ${longdate}
+2022-10-25 12:53:16.2794 Trace Initializing ${longdate} ${level:uppercase=true} ${message}
+2022-10-25 12:53:16.2940 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-10-25 12:53:16.2940 Trace Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2022-10-25 12:53:16.2940 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-10-25 12:53:16.2940 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-10-25 12:53:16.2940 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-10-25 12:53:16.2940 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-10-25 12:53:16.2940 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-10-25 12:53:16.2940 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-10-25 12:53:16.2940 Trace Initializing Layout Renderer: ${literal}
+2022-10-25 12:53:16.2940 Trace Initializing Layout Renderer: ${shortdate}
+2022-10-25 12:53:16.2940 Trace Initializing Layout Renderer: ${literal}
+2022-10-25 12:53:16.2940 Trace Initializing C:\Users\jacin\source\repos\WebAplicationMonica\WebAplicationMonica\CrossCuting\Logging\${shortdate}_logfile.txt
+2022-10-25 12:53:16.2940 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-10-25 12:53:16.2940 Trace Scanning SimpleLayout 'C:\Users\jacin\source\repos\WebAplicationMonica\WebAplicationMonica\CrossCuting\Logging\${shortdate}_logfile.txt'
+2022-10-25 12:53:16.2940 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-10-25 12:53:16.2940 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-10-25 12:53:16.2940 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-10-25 12:53:16.2940 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-10-25 12:53:16.2940 Trace Initializing FileTarget(Name=logfile)
+2022-10-25 12:53:16.2940 Trace FindReachableObject<NLog.Layouts.Layout>:
+2022-10-25 12:53:16.2940 Trace Scanning FileTarget 'FileTarget(Name=logfile)'
+2022-10-25 12:53:16.2940 Trace  Scanning Property FileName 'C:\Users\jacin\source\repos\WebAplicationMonica\WebAplicationMonica\CrossCuting\Logging\${shortdate}_logfile.txt' NLog.Layouts
+2022-10-25 12:53:16.3085 Trace  Scanning SimpleLayout 'C:\Users\jacin\source\repos\WebAplicationMonica\WebAplicationMonica\CrossCuting\Logging\${shortdate}_logfile.txt'
+2022-10-25 12:53:16.3085 Trace  Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2022-10-25 12:53:16.3085 Trace  Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2022-10-25 12:53:16.3085 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2022-10-25 12:53:16.3085 Trace FileTarget(Name=logfile) has 2 layouts
+2022-10-25 12:53:16.3085 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.SingleProcessFileAppender+Factory
+2022-10-25 12:53:17.8224 Debug Targets configured when LogLevel >= Debug for Logger: WebAplicationMonica.CrossCuting.Logging.LoggerManager
+2022-10-25 12:53:17.8224 Debug Logger WebAplicationMonica.CrossCuting.Logging.LoggerManager [Debug] => logfile
+2022-10-25 12:53:17.8264 Debug Logger WebAplicationMonica.CrossCuting.Logging.LoggerManager [Info] => logfile
+2022-10-25 12:53:17.8264 Debug Logger WebAplicationMonica.CrossCuting.Logging.LoggerManager [Warn] => logfile
+2022-10-25 12:53:17.8264 Debug Logger WebAplicationMonica.CrossCuting.Logging.LoggerManager [Error] => logfile
+2022-10-25 12:53:17.8264 Debug Logger WebAplicationMonica.CrossCuting.Logging.LoggerManager [Fatal] => logfile
+2022-10-25 12:53:17.8475 Debug FileTarget(Name=logfile): Preparing for new file 'C:\Users\jacin\source\repos\WebAplicationMonica\WebAplicationMonica\CrossCuting\Logging\2022-10-25_logfile.txt'
+2022-10-25 12:53:17.8475 Debug FileTarget(Name=logfile): Creating file appender: C:\Users\jacin\source\repos\WebAplicationMonica\WebAplicationMonica\CrossCuting\Logging\2022-10-25_logfile.txt
+2022-10-25 12:53:17.8566 Trace FileTarget(Name=logfile): Opening C:\Users\jacin\source\repos\WebAplicationMonica\WebAplicationMonica\CrossCuting\Logging\2022-10-25_logfile.txt with allowFileSharedWriting=False
