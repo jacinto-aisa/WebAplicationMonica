@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.EntityFrameworkCore;
-using System.Net.Sockets;
 
 namespace WebAplicationMonica.Models
 {
@@ -15,14 +14,7 @@ namespace WebAplicationMonica.Models
             // If you use SQL Server Express, change connection string appropriately
             // NOTE: Do not hardcode connection strings in code.  
             // This is hard coded here to limit scope of demo.
-            //var connectionString = "Server=tcp:servidorcurso.database.windows.net,1433;Initial Catalog=academia;Persist Security Info=False;User ID=jacinto;Password=P0t@toP0t@to;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
-
-            //Workaround 1.
-            //Copy security.dll to C:\Windows\System32\ on your docker container.
-            var connectionString = "Server=tcp:servidorwebmonica.database.windows.net,1433;Initial Catalog=BaseDatosWebApplicationMonica;Persist Security Info=False; User ID=jacinto; Password=P0t@toP0t@to; MultipleActiveResultSets = False; Encrypt = True; TrustServerCertificate = False; Connection Timeout = 30;";
-
-            //var connectionString = "Server=tcp:servidorwebmonica.database.windows.net,1433;Initial Catalog=BaseDatosWebApplicationMonica;Persist Security Info=False; User ID=jacinto; Password=P0t@toP0t@to; MultipleActiveResultSets = False; Encrypt = True; TrustServerCertificate = False; Connection Timeout = 30;";
-            //var connectionString = "Server=tcp:servidorcurso.database.windows.net,1433;Initial Catalog=academia;Persist Security Info=False;User ID=jacinto;Password=P0t@toP0t@to;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            var connectionString = "Server=tcp:servidormonicasql.database.windows.net,1433;Initial Catalog=MonicaSQL;Persist Security Info=False;User ID=jacinto;Password=P0t@toP0t@to;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
             //var connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=University; Integrated Security=True;";
 
             dbContextBuilder.UseSqlServer(connectionString, sqloptions => {
