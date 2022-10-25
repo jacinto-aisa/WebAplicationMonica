@@ -2,6 +2,7 @@
 using System.Reflection;
 using System.Resources;
 using WebAplicationMonica.CrossCuting.Exceptions;
+using WebAplicationMonica.CrossCuting.Logging;
 using WebAplicationMonica.Models;
 
 namespace WebAplicationMonica.Services
@@ -11,9 +12,10 @@ namespace WebAplicationMonica.Services
         readonly DesignTimeJacintoContextFactory factoriaDeContextos = new();
         readonly JacintoContext contexto;
         readonly ResourceManager resourceManager = new("WebAplicationMonica.Resources.ExceptionMessages", Assembly.GetExecutingAssembly());
-
-        public EFRepositorioModulo()
+        readonly ILoggerManager _loggerManager;
+        public EFRepositorioModulo(ILoggerManager loggerManager)
         {
+            _loggerManager = loggerManager;
             string[] args = new string[1];
             contexto = factoriaDeContextos.CreateDbContext(args);
         }

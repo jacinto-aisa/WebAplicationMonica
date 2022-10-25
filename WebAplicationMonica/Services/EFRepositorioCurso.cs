@@ -15,7 +15,7 @@ namespace WebAplicationMonica.Services
     {
         readonly DesignTimeJacintoContextFactory factoriaDeContextos = new();
         readonly JacintoContext contexto;
-        ResourceManager resourceManager = new ResourceManager("WebAplicationMonica.Resources.ExceptionMessages", Assembly.GetExecutingAssembly());
+        readonly ResourceManager resourceManager = new("WebAplicationMonica.Resources.ExceptionMessages", Assembly.GetExecutingAssembly());
         readonly ILoggerManager LoggerManager; 
         public EFRepositorioCurso(ILoggerManager loggerManager)
         {

@@ -1,0 +1,4 @@
+﻿dotnet tool install --global dotnet-ef
+dotnet tool update --global dotnet-ef
+dotnet ef migrations add InitialCreateAzure --context JacintoContext
+dotnet ef database update --context JacintoContext
